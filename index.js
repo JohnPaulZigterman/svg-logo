@@ -50,7 +50,7 @@ inquirer
 
         shape.setColor(shapeColor);
 
-        fs.writeFile("./examples/logo.svg", `
+        fs.writeFile("./generated/logo.svg", `
 <svg version="1.1"
     width="300" height="200"
     xmlns="http://www.w3.org/2000/svg">

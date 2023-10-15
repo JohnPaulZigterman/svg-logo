@@ -53,14 +53,14 @@ inquirer
 
         fs.writeFile(text.toLowerCase().split(" ").join("") + ".svg", `
 <svg version="1.1"
-    width="300" height="200"
+    width="300" height="300"
     xmlns="http://www.w3.org/2000/svg">
    
 <rect width="100%" height="100%" fill="white" />
    
 ${shape.render()}
    
-<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
+<text x="50%" y="55%" font-size="60" font-family="monospace" text-anchor="middle" fill="${textColor}">${text}</text>
    
 </svg>
 `, (err) =>

@@ -51,7 +51,7 @@ inquirer
         shape.setColor(shapeColor);
         console.log(shape);
 
-        fs.writeFile(text.toLowerCase().split(" ").join("") + ".svg", `
+        fs.writeFile("./examples/" + text.toLowerCase().split(" ").join("") + ".svg", `
 <svg version="1.1"
     width="300" height="300"
     xmlns="http://www.w3.org/2000/svg">

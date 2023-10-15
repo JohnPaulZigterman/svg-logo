@@ -36,7 +36,7 @@ inquirer
 
         var textColor = response.textcolor;
 
-        var shape;
+        let shape;
 
         if (response.shape == 'Circle') {
             shape = new Circle();
@@ -48,16 +48,19 @@ inquirer
 
         var shapeColor = response.shapecolor;
 
-        fs.writeFile(response.text.toLowerCase().split(" ").join("") + ".svg", `
+        shape.setColor(shapeColor);
+        console.log(shape);
+
+        fs.writeFile(text.toLowerCase().split(" ").join("") + ".svg", `
 <svg version="1.1"
     width="300" height="200"
     xmlns="http://www.w3.org/2000/svg">
    
 <rect width="100%" height="100%" fill="white" />
    
-<circle cx="150" cy="100" r="80" fill="green" />
+${shape.render()}
    
-<text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
    
 </svg>
 `, (err) =>

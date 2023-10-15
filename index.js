@@ -49,9 +49,8 @@ inquirer
         var shapeColor = response.shapecolor;
 
         shape.setColor(shapeColor);
-        console.log(shape);
 
-        fs.writeFile("./examples/" + text.toLowerCase().split(" ").join("") + ".svg", `
+        fs.writeFile("./examples/logo.svg", `
 <svg version="1.1"
     width="300" height="300"
     xmlns="http://www.w3.org/2000/svg">
@@ -65,5 +64,6 @@ ${shape.render()}
 </svg>
 `, (err) =>
             err ? console.error(err) : console.log('success!')
-        )
+        );
+        console.log('Generated logo.svg');
 });

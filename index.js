@@ -1,6 +1,7 @@
 const fs = require('fs');
 const inquirer = require("inquirer");
-const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt')
+const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt');
+inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt);
 const {Circle, Square, Triangle} = require("./lib/shapes");
 
 inquirer
